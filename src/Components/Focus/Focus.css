@@ -1,0 +1,20 @@
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+.focus-form-container {
+  border: 1px solid rgba(0, 0, 0, 0.5); }
+
+.focus-form {
+  border: 1px solid red;
+  padding: 1rem; }
+
+.form-input {
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center; }
+  .form-input:focus {
+    outline: none; }
+
+.main-goal-conatiner {
+  border: 1px solid blue; }

@@ -4,7 +4,7 @@ import "./App.css";
 // import Links from "./Components/Links/Links";
 // import ToDO from "./Components/ToDo/ToDo";
 // import Greeting from "./Components/Greeting/Greeting";
-import Focus from "./Components/Focus/Focus";
+import Focus from "./Components/Focus/Focus.jsx";
 
 class App extends Component {
   render() {
