@@ -1,0 +1,11 @@
+.links-container {
+    display: flex;
+    flex-flow: column nowrap;
+    background: grey;
+    width: 20vw;    
+}
+
+.links-list {
+ border: 1px solid red;
+ list-style: none;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Links.css";
 import AddLink from "./AddLink";
 import LinkItem from "./LinkItem";
 
@@ -47,8 +48,8 @@ class Links extends Component {
   render() {
     console.log("links: ", this.state.links);
     return (
-      <div>
-        <ul>
+      <div className="links-container">
+        <ul className="links-list">
           <LinkItem links={this.state.links} deleteItem={this.deleteItem} />
           <AddLink
             name={this.state.fields.name}
