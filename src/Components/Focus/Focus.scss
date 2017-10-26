@@ -3,7 +3,13 @@ h3 {
   color: white;
   margin: 0;
   padding: 1rem;
-  // text-align: center;
+}
+
+h4 {
+  font: 2rem Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 1rem;
 }
 
 .focus-form-container {
@@ -13,6 +19,9 @@ h3 {
   border: 1px solid white;
   text-align: center;
   width: 50vw;
+}
+.add-main-goal-container {
+  padding: 1rem;
 }
 
 .focus-form {
@@ -27,7 +36,7 @@ h3 {
   color: white;
   font-size: 3rem;
   text-align: center;
-  width: 75%;
+  width: 70%;
 
   &:focus {
     outline: none;
@@ -39,7 +48,7 @@ h3 {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue;
+  padding: 1rem;
 }
 
 .main-goal-form {
@@ -49,6 +58,9 @@ h3 {
   align-items: center;
   padding: 1rem;
   width: 50%;
+  & h3 {
+    padding: 0 1rem;
+  }
 }
 
 button {
@@ -57,7 +69,6 @@ button {
   border: none;
   border-radius: 100%;
   font-size: 1.5rem;
-  padding: 1rem;
   &:hover {
     border: 1px solid white;
   }

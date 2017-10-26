@@ -4,6 +4,12 @@ h3 {
   margin: 0;
   padding: 1rem; }
 
+h4 {
+  font: 2rem Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 1rem; }
+
 .focus-form-container {
   position: absolute;
   bottom: 15%;
@@ -11,6 +17,9 @@ h3 {
   border: 1px solid white;
   text-align: center;
   width: 50vw; }
+
+.add-main-goal-container {
+  padding: 1rem; }
 
 .focus-form {
   padding: 1rem;
@@ -23,7 +32,7 @@ h3 {
   color: white;
   font-size: 3rem;
   text-align: center;
-  width: 75%; }
+  width: 70%; }
   .focus-form-input:focus {
     outline: none; }
 
@@ -32,7 +41,7 @@ h3 {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid blue; }
+  padding: 1rem; }
 
 .main-goal-form {
   display: flex;
@@ -41,14 +50,15 @@ h3 {
   align-items: center;
   padding: 1rem;
   width: 50%; }
+  .main-goal-form h3 {
+    padding: 0 1rem; }
 
 button {
   color: white;
   background: none;
   border: none;
   border-radius: 100%;
-  font-size: 1.5rem;
-  padding: 1rem; }
+  font-size: 1.5rem; }
   button:hover {
     border: 1px solid white; }
 

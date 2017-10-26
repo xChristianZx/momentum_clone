@@ -50,7 +50,7 @@ class Focus extends Component {
     return (
       <div className="focus-form-container">
         <div className={focusFormClass}>
-          <h3>What is your main focus today?</h3>
+          <h4>What is your main focus today?</h4>
           <form className="focus-form" onSubmit={this.handleSubmit}>
             <input
               className="focus-form-input"
@@ -62,7 +62,7 @@ class Focus extends Component {
           </form>
         </div>
         <div className={mainGoalClass}>
-          <h3>Today</h3>
+          <h4>Today</h4>
           <div className="main-goal-form">
             <span>
               <input
