@@ -10,10 +10,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* <Links /> */}
         <Focus />
         {/* <Greeting /> */}
         {/* <Search /> */}
-        {/* <Links /> */}
         {/* <ToDO /> */}
       </div>
     );
