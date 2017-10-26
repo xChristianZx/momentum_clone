@@ -1,27 +1,69 @@
-.hidden {
-  display: none;
-  visibility: hidden;
+h3 {
+  font: 3rem Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  // text-align: center;
 }
 
 .focus-form-container {
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 15%;
+  left: 25%;
+  border: 1px solid white;
+  text-align: center;
+  width: 50vw;
 }
 
 .focus-form {
-  border: 1px solid red;
   padding: 1rem;
+  text-align: center;
 }
 
-.form-input {
+.focus-form-input {
+  background: inherit;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid white;
+  color: white;
+  font-size: 3rem;
   text-align: center;
+  width: 75%;
 
   &:focus {
     outline: none;
   }
 }
 
-.main-goal-conatiner {
-	border: 1px solid blue;
+.main-goal-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+}
+
+.main-goal-form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  width: 50%;
+}
+
+button {
+  color: white;
+  background: none;
+  border: none;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  &:hover {
+    border: 1px solid white;
+  }
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
 }

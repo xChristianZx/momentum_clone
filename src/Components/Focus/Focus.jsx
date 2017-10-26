@@ -38,19 +38,22 @@ class Focus extends Component {
   };
 
   render() {
-    let focusFormClass = classNames({ hidden: this.state.goalSubmitted });
+    let focusFormClass = classNames({
+      "add-main-goal-container": true,
+      hidden: this.state.goalSubmitted
+    });
     let mainGoalClass = classNames({
       "main-goal-container": true,
       hidden: !this.state.goalSubmitted
-		});
-		
+    });
+
     return (
       <div className="focus-form-container">
         <div className={focusFormClass}>
           <h3>What is your main focus today?</h3>
           <form className="focus-form" onSubmit={this.handleSubmit}>
             <input
-              className="form-input"
+              className="focus-form-input"
               type="text"
               name="goal"
               onChange={this.handleChange}
@@ -60,18 +63,20 @@ class Focus extends Component {
         </div>
         <div className={mainGoalClass}>
           <h3>Today</h3>
-          <form>
-            <label>
+          <div className="main-goal-form">
+            <span>
               <input
                 type="checkbox"
                 name="completed"
                 checked={this.state.completed}
                 onChange={this.handleChange}
               />
-              {this.state.goal}
-            </label>
-            <button onClick={this.deleteGoal}>Delete</button>
-          </form>
+            </span>
+            <h3>{this.state.goal}</h3>
+            <span>
+              <button onClick={this.deleteGoal}>X</button>
+            </span>
+          </div>
         </div>
       </div>
     );
