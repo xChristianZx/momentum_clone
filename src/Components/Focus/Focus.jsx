@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Focus.css";
+import classNames from "classnames";
 
 class Focus extends Component {
   constructor(props) {
@@ -37,15 +38,15 @@ class Focus extends Component {
   };
 
   render() {
-    const focusFormStyles = this.state.goalSubmitted
-      ? { visibility: "hidden" }
-      : { visibility: "visible" };
-    const goalSubmittedStyles = this.state.goalSubmitted
-      ? { visibility: "visible" }
-      : { visibility: "hidden" };
+    let focusFormClass = classNames({ hidden: this.state.goalSubmitted });
+    let mainGoalClass = classNames({
+      "main-goal-container": true,
+      hidden: !this.state.goalSubmitted
+		});
+		
     return (
       <div className="focus-form-container">
-        <div style={focusFormStyles}>
+        <div className={focusFormClass}>
           <h3>What is your main focus today?</h3>
           <form className="focus-form" onSubmit={this.handleSubmit}>
             <input
@@ -57,7 +58,7 @@ class Focus extends Component {
             />
           </form>
         </div>
-        <div className="main-goal-container" style={goalSubmittedStyles}>
+        <div className={mainGoalClass}>
           <h3>Today</h3>
           <form>
             <label>
@@ -69,7 +70,7 @@ class Focus extends Component {
               />
               {this.state.goal}
             </label>
-            <button onClick={this.deleteGoal}>BUTTON</button>
+            <button onClick={this.deleteGoal}>Delete</button>
           </form>
         </div>
       </div>
