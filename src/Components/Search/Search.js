@@ -33,13 +33,13 @@ class Search extends Component {
       <div className="search-container">
         <form className="search-form" onSubmit={this.handleSubmit}>
           <span className="search-underline">
-          <FaSearch className="search-icon" />
-          <input
-            className="search-form-input"
-            type="text"
-            value={this.state.text}
-            onChange={this.handleChange}
-          />
+            <FaSearch className="search-icon" />
+            <input
+              className="search-form-input"
+              type="text"
+              value={this.state.text}
+              onChange={this.handleChange}
+            />
           </span>
         </form>
       </div>

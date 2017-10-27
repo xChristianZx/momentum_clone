@@ -1,5 +1,7 @@
 ## Momentum Clone
-Built with React
+This is a clone of the [Momentum Dashboard](https://momentumdash.com/) using React
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
+## Built with
+* [Create React App](https://github.com/facebookincubator/create-react-app)
+* [React Icons](https://gorangajic.github.io/react-icons/index.html)
+* [classNames](https://github.com/JedWatson/classnames)
