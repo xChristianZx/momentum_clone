@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "./Search.css";
+import FaSearch from "react-icons/lib/fa/search";
 
 class Search extends Component {
   constructor(props) {
@@ -28,13 +30,17 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="search-container">
+        <form className="search-form" onSubmit={this.handleSubmit}>
+          <span className="search-underline">
+          <FaSearch className="search-icon" />
           <input
+            className="search-form-input"
             type="text"
             value={this.state.text}
             onChange={this.handleChange}
           />
+          </span>
         </form>
       </div>
     );

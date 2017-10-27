@@ -1,0 +1,30 @@
+.search-container {
+  position: absolute;
+  top: 2%;
+  left: 10%;
+}
+
+.search-form {
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.search-underline {
+  border-bottom: 2px solid white;
+  padding: 1rem;
+}
+.search-icon {
+  color: white;
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.search-form-input {
+  background: inherit;
+  border: none;
+  //   border-bottom: 2px solid white;
+  color: white;
+  font-size: 2rem;
+  &:focus {
+    outline: none;
+  }
+}
