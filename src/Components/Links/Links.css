@@ -1,9 +1,60 @@
 .links-container {
-  display: flex;
-  flex-flow: column nowrap;
-  background: grey;
+  position: absolute;
+  left: 0;
+  top: 5%;
+  margin: 0 1vw;
   width: 20vw; }
 
+.links-click-label {
+  color: white;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 0.5rem;
+  margin: 0 0.5rem; }
+
+.links-list-container {
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  list-style: none;
+  width: 15vw; }
+  .links-list-container a {
+    color: inherit;
+    text-decoration: none; }
+
 .links-list {
-  border: 1px solid red;
-  list-style: none; }
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: space-between;
+  justify-content: center;
+  color: white;
+  list-style: none;
+  padding: 0; }
+
+.links-list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  font-size: 1.5rem;
+  line-height: 3rem; }
+
+.add-link-container {
+  padding: 0.5rem; }
+
+.add-link-input {
+  background: inherit;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  width: 100%; }
+  .add-link-input:focus {
+    outline: none; }
+
+.add-link-input-button {
+  visibility: hidden;
+  display: none; }
+
+.active {
+  visibility: visible; }

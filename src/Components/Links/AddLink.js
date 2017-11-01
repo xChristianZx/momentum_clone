@@ -1,29 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
 
-class AddLink extends Component {
-  render() {
-    return (
-      <li>
-        <form onSubmit={this.props.handleSubmit}>
-          <input
-            name="name"
-            type="text"
-            placeholder="Name"
-            value={this.props.name}
-            onChange={this.props.handleChange}
-          />
-          <input
-            name="url"
-            type="text"
-            placeholder="url"
-            value={this.props.url}
-            onChange={this.props.handleChange}
-          />
-          <input type="submit" value="+"/>
-        </form>
-      </li>
-    );
-  }
-}
+const AddLink = props => {
+  return (
+    <div className="add-link-container">
+      <form onSubmit={props.handleSubmit}>
+        <input
+          className="add-link-input"
+          name="name"
+          type="text"
+          placeholder="Name"
+          value={props.name}
+          onChange={props.handleChange}
+        />
+        <input
+          className="add-link-input"
+          name="url"
+          type="text"
+          placeholder="URL"
+          value={props.url}
+          onChange={props.handleChange}
+        />
+        <input className="add-link-input-button" type="submit" value="+" />
+      </form>
+    </div>
+  );
+};
 
 export default AddLink;

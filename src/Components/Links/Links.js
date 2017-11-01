@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Links.css";
 import AddLink from "./AddLink";
 import LinkItem from "./LinkItem";
+import classNames from "classnames";
 
 class Links extends Component {
   constructor(props) {
@@ -11,7 +12,8 @@ class Links extends Component {
       fields: {
         name: "",
         url: ""
-      }
+      },
+      active: false
     };
   }
 
@@ -45,11 +47,26 @@ class Links extends Component {
     }));
   };
 
+  activeHandler = () => {
+    if (this.state.active === false) {
+      this.setState({ active: true });
+    } else {
+      this.setState({ active: false });
+    }
+  };
+
   render() {
     console.log("links: ", this.state.links);
+    let activeLinksList = classNames({
+      "links-list-container": true,
+      active: this.state.active
+    });
     return (
       <div className="links-container">
-        <ul className="links-list">
+        <div className="links-click-label">
+          <span onClick={this.activeHandler}>Links</span>
+        </div>
+        <div className={activeLinksList}>
           <LinkItem links={this.state.links} deleteItem={this.deleteItem} />
           <AddLink
             name={this.state.fields.name}
@@ -57,7 +74,7 @@ class Links extends Component {
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
           />
-        </ul>
+        </div>
       </div>
     );
   }
