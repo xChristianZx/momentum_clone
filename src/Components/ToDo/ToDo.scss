@@ -1,0 +1,54 @@
+.todo-container {
+  position: absolute;
+  right: 0;
+  bottom: 2%;
+  //   border: 1px solid red;
+  margin: 0 1vw;
+  list-style: none;
+  width: 20vw;
+}
+
+.todo-click-label {
+  color: white;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 0.5rem;
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+.todo-list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: space-between;
+  justify-content: center;
+  color: white;
+  list-style: none;
+  padding: 0;
+}
+.todo-list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem .2rem;
+  font-size: 1.5rem;
+}
+
+.add-item-container {
+  // border: 1px solid green;
+  padding: 0.5rem;
+}
+
+.add-item-input {
+  background: inherit;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  &:focus {
+    outline: none;
+  }
+}
