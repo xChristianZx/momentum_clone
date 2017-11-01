@@ -12,7 +12,8 @@
   text-align: right;
   padding: 0.5rem; }
 
-.active {
+.todo-list-container {
+  visibility: hidden;
   background: rgba(0, 0, 0, 0.5);
   padding: 1rem; }
 
@@ -30,16 +31,21 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3rem .2rem;
+  padding: 0.3rem 0.2rem;
   font-size: 1.5rem; }
 
 .add-item-container {
+  border: 1px solid green;
   padding: 0.5rem; }
 
 .add-item-input {
   background: inherit;
   border: none;
   color: white;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  width: 100%; }
   .add-item-input:focus {
     outline: none; }
+
+.active {
+  visibility: visible; }

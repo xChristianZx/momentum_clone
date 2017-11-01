@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import "./ToDo.css";
 import AddItem from "./AddItem";
 import TDList from "./TDList";
+import classNames from "classnames";
 
 class ToDoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       list: [],
-      item: ""
+      item: "",
+      active: false
     };
   }
 
@@ -33,11 +35,24 @@ class ToDoList extends Component {
     }));
   };
 
+  activeHandler = () => {
+    if (this.state.active === false) {
+      this.setState({ active: true });
+    } else {
+      this.setState({ active: false });
+    }
+  };
+
   render() {
     console.log("list: ", this.state.list);
+    console.log(this.state.active);
+    let activeToDoList = classNames({
+      "todo-list-container": true,
+      active: this.state.active
+    });
     return (
       <div className="todo-container">
-        <div className="active">
+        <div className={activeToDoList}>
           <TDList list={this.state.list} deleteItem={this.deleteItem} />
           <AddItem
             item={this.state.item}
@@ -45,10 +60,7 @@ class ToDoList extends Component {
             handleSubmit={this.handleSubmit}
           />
         </div>
-        <div
-          className="todo-click-label"
-          onClick={() => console.log("WEEEEhAAAAA")}          
-        >
+        <div className="todo-click-label" onClick={this.activeHandler}>
           To Do
         </div>
       </div>
