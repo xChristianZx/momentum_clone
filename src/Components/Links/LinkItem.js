@@ -4,9 +4,9 @@ const LinkItem = props => {
   const linkList = props.links.map(link => (
     <li className="links-list-item" key={link.id}>
       <a href={link.url} target="_blank">
-        <p>{link.name}</p>
+        <span>{link.name}</span>
       </a>
-      <button type="submit" onClick={props.deleteItem.bind(this, link.id)}>
+      <button className="list-item-delete-button" type="submit" onClick={props.deleteItem.bind(this, link.id)}>
         x
       </button>
     </li>

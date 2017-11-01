@@ -11,7 +11,8 @@
   font-size: 1.5rem;
   text-align: right;
   padding: 0.5rem;
-  margin: 0 0.5rem; }
+  margin: 0 0.5rem;
+  cursor: pointer; }
 
 .todo-list-container {
   visibility: hidden;
