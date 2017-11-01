@@ -60,8 +60,8 @@ class ToDoList extends Component {
             handleSubmit={this.handleSubmit}
           />
         </div>
-        <div className="todo-click-label" onClick={this.activeHandler}>
-          To Do
+        <div className="todo-click-label">
+          <span onClick={this.activeHandler}>To Do</span>
         </div>
       </div>
     );

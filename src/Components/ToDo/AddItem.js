@@ -8,7 +8,7 @@ const AddItem = props => {
           className="add-item-input"
           type="text"
           onChange={props.handleChange}
-          placeholder={"Add ToDo"}
+          placeholder={"New ToDo"}
           value={props.item}
         />
       </form>
