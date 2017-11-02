@@ -1,0 +1,37 @@
+.quotes-container {
+  // border: 1px solid red;
+  position: absolute;
+  left: 25%;
+  bottom: 2%;
+  width: 50vw;
+  text-align: center;
+}
+
+.quote-layout-container:hover {
+  & :last-child {
+    display: block;
+    visibility:visible;
+  }
+}
+
+.display {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.author-button-container {
+  display: none;
+  visibility: hidden;
+  color: white;
+}
+
+.button-container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.button-next {
+  border: 1px solid red;
+  width: 25%;
+}

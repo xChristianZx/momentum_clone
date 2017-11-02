@@ -5,6 +5,7 @@ import Links from "./Components/Links/Links";
 import ToDO from "./Components/ToDo/ToDo";
 import Greeting from "./Components/Greeting/Greeting";
 import Focus from "./Components/Focus/Focus.jsx";
+import Quotes from "./Components/Quotes/Quotes"
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <Search />
         <Greeting />
         <Focus />
+        <Quotes/>
         <ToDO />
       </div>
     );
