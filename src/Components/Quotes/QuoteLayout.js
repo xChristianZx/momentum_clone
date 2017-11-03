@@ -2,19 +2,20 @@ import React from "react";
 import TwitterLink from "./TwitterLink";
 
 const QuoteLayout = props => {
+  const quotes = props.quotes;
+  const number = props.number;
   return (
     <div className="quote-layout-container">
-      <div className="display">
-        <p className="quote-item">{props.quotes[props.number].quote}</p>
+      <div className="quote-display">
+        <p className="quote-item" onClick={props.handleClick}>
+          {quotes[number].quote}
+        </p>
       </div>
-      <div className="author-button-container">
-        <p className="author">~ {props.quotes[props.number].author}</p>
-        <div className="button-container">
-          <button className="button-next" onClick={props.handleClick}>
-            Next!
-          </button>
-          <TwitterLink quotes={props.quotes} number={props.number} />
-        </div>
+      <div className="author-twitter-container">
+        <p className="author">{quotes[number].author}</p>
+        <span className="twitter-container">
+          <TwitterLink quotes={quotes} number={number} />
+        </span>
       </div>
     </div>
   );

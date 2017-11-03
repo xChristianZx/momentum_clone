@@ -6,7 +6,6 @@ import QuoteLayout from "./QuoteLayout.js";
 class Quotes extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       number: 0
     };
@@ -26,11 +25,8 @@ class Quotes extends Component {
   };
 
   handleClick = () => {
-    const max = quoteList.length;
-    const random = () => {
-      return Math.floor(Math.random() * (max - 0)) + 0;
-    };
-    this.setState({ number: random() });
+    const newNum = this.randomQ();
+    this.setState({ number: newNum });
   };
 
   render() {
