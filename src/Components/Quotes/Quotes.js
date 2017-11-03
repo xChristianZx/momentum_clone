@@ -12,6 +12,19 @@ class Quotes extends Component {
     };
   }
 
+  componentDidMount() {
+    const newNum = this.randomQ();
+    this.setState({ number: newNum });
+  }
+
+  randomQ = () => {
+    const max = quoteList.length;
+    const random = () => {
+      return Math.floor(Math.random() * (max - 0)) + 0;
+    };
+    return random();
+  };
+
   handleClick = () => {
     const max = quoteList.length;
     const random = () => {
