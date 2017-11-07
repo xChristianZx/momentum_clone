@@ -3,15 +3,16 @@ $text-color: rgb(191, 191, 191);
 .links-container {  
   position: absolute;
   left: 0;
-  top: 5%;
+  top: 2%;
   margin: 0 1vw;
   width: 20vw;
   z-index: 2;
+  // border: 1px solid green;  
 }
-.links-click-label {
+.links-click-label {  
   color: white;
   font-size: 1.5rem;
-  text-align: left;
+  text-align: left;   
   padding: 0.5rem;
   margin: 0 0.5rem 1rem;
   cursor: pointer;
@@ -19,6 +20,7 @@ $text-color: rgb(191, 191, 191);
 
 .links-list-container {
   visibility: hidden;
+  display: none;
   background: rgba(0, 0, 0, 0.5);
   color: $text-color;  
   list-style: none;

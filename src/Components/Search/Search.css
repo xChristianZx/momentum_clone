@@ -1,25 +1,26 @@
 .search-container {
   position: absolute;
-  top: 1%;
-  left: 5%; }
+  top: 2%;
+  left: 5%;
+  z-index: 2; }
 
 .search-form {
-  padding: 1rem;
-  margin: 0.5rem; }
+  padding: 0 0.5rem;
+  margin: 0 1rem; }
 
 .search-underline {
-  border-bottom: 2px solid white;
   padding: 1rem; }
 
 .search-icon {
   color: white;
-  font-size: 2rem;
-  padding-right: 1rem; }
+  font-size: 1.5rem;
+  padding-right: 0.5rem; }
 
 .search-form-input {
   background: inherit;
   border: none;
   color: white;
-  font-size: 2rem; }
+  font-size: 1.5rem; }
   .search-form-input:focus {
-    outline: none; }
+    outline: none;
+    border-bottom: 2px solid white; }

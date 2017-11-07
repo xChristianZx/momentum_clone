@@ -1,7 +1,7 @@
 .links-container {
   position: absolute;
   left: 0;
-  top: 5%;
+  top: 2%;
   margin: 0 1vw;
   width: 20vw;
   z-index: 2; }
@@ -16,6 +16,7 @@
 
 .links-list-container {
   visibility: hidden;
+  display: none;
   background: rgba(0, 0, 0, 0.5);
   color: #bfbfbf;
   list-style: none;
