@@ -55,7 +55,7 @@ class Weather extends Component {
       <div className="weather-container">
         <div className="weather-temp">
           {this.state.temp}
-          <sup>o</sup>
+          <span dangerouslySetInnerHTML={{ __html: "&#176" }} />
         </div>
         <p className="weather-city">{this.state.city}</p>
       </div>
