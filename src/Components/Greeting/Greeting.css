@@ -1,17 +1,16 @@
 .greeting-container {
   position: absolute;
   top: 35%;
-  left: 25%;
-  width: 50vw;
+  left: 20%;
+  width: 60vw;
   color: white;
   text-align: center; }
 
-h1 {
+.clock-time {
   font: bold 12rem Arial, sans-serif;
-  padding: 0.5rem 1rem;
   margin: 0; }
 
-h2 {
+.greeting-text {
   font-size: 5rem;
-  padding: 0.5rem 1rem;
-  margin: 0; }
+  margin: 0;
+  width: 100%; }

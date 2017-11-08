@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './Greeting.css';
+import "./Greeting.css";
 import Clock from "./Clock";
 
 class Greeting extends Component {
@@ -7,7 +7,7 @@ class Greeting extends Component {
     super(props);
     this.state = {
       user: "",
-      time: ""
+      timeOfDay: ""
     };
   }
   componentDidMount() {
@@ -19,9 +19,19 @@ class Greeting extends Component {
     const date = new Date();
     const hour = date.getHours();
 
-    const timeOfDay = hour < 12 ? "Morning" : "Evening";
+    const timeOfDay = time => {
+      if (time < 12) {
+        return "Morning";
+      }
+      if (time > 18) {
+        return "Evevning";
+      }
+      return "Afternoon";
+    };
 
-    this.setState({ time: timeOfDay });
+    const setTOD = timeOfDay(hour);
+
+    this.setState({ timeOfDay: setTOD });
     console.log("hour", hour, typeof hour);
   };
 
@@ -29,8 +39,8 @@ class Greeting extends Component {
     return (
       <div className="greeting-container">
         <Clock />
-        <h2>
-          Good {this.state.time}, {this.state.user}
+        <h2 className="greeting-text">
+          Good {this.state.timeOfDay}, {this.state.user}
         </h2>
       </div>
     );

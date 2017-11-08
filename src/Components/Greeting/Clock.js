@@ -4,7 +4,7 @@ class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: ''
+      time: ""
     };
   }
 
@@ -14,9 +14,14 @@ class Clock extends Component {
 
   tick = () => {
     const date = new Date();
-    const options = { hour: "numeric", minute: "numeric" };
-    const fDate = date.toLocaleTimeString("en-US", options);
-    this.setState({ time: fDate });
+    // const options = { hour: "numeric", minute: "numeric" };
+    // const formattedDate = date.toLocaleTimeString("en-US", options);
+    const hours = date.getHours();
+    const fHours = hours > 12 ? hours - 12 : hours;
+    const min = date.getMinutes();
+    const fMin = min < 10 ? `0${min}` : min;
+    const formattedDate = `${fHours}:${fMin}`;
+    this.setState({ time: formattedDate });
   };
 
   componentWillUnmount() {
@@ -25,8 +30,8 @@ class Clock extends Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.state.time}</h1>
+      <div className="clock-container">
+        <h1 className="clock-time">{this.state.time}</h1>
       </div>
     );
   }
