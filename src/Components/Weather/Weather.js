@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import "./Weather.css";
 import Axios from "axios";
-
-const API_Key = "be12c9cede78dacab40103d7c20d67fb";
+import API_Key from "../../utils/key";
 
 class Weather extends Component {
   constructor(props) {
@@ -54,7 +53,10 @@ class Weather extends Component {
   render() {
     return (
       <div className="weather-container">
-        <div className="weather-temp">{this.state.temp}<sup>o</sup></div>
+        <div className="weather-temp">
+          {this.state.temp}
+          <sup>o</sup>
+        </div>
         <p className="weather-city">{this.state.city}</p>
       </div>
     );
