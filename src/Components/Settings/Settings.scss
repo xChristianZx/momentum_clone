@@ -1,8 +1,41 @@
-.settings-icon {
+$main-text-color: rgba(255, 255, 255, 0.8);
+
+.settings-container {
+  // border: 1px solid white;
   position: absolute;
-  color: white;
+  color: $main-text-color;
   bottom: 2%;
   left: 0;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.settings-icon {
   margin: 0 1vw;
   font-size: 2rem;
+}
+
+.location-container:hover {
+  .location-title {
+    transform: translateY(-10px);
+  }
+  .location-photographer {
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+}
+
+.location-title {
+  font-size: 1.2rem;
+  font-weight: 100;
+  transition: all 0.5s ease;
+}
+
+.location-photographer {
+  position: absolute;
+  font-size: 1rem;
+  transform: translateY(-35px);
+  opacity: 0;
+  transition: all 0.5s ease;
 }
