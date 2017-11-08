@@ -1,3 +1,5 @@
+$main-text-color: rgba(255, 255, 255, 0.8);
+
 .search-container {
   position: absolute;
   top: 2%;
@@ -15,7 +17,7 @@
   padding: 1rem;
 }
 .search-icon {
-  color: white;
+  color: $main-text-color;
   font-size: 1.5rem;
   padding-right: 0.5rem;
 }

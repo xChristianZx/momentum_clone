@@ -3,7 +3,7 @@
   top: 2%;
   right: 0;
   margin: 0 1vw;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem; }
 
 .weather-temp {

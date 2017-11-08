@@ -2,7 +2,8 @@
   position: absolute;
   left: 25%;
   bottom: 2%;
-  width: 50vw; }
+  width: 50vw;
+  padding: 1rem 0; }
 
 .quotes-container:hover .quote-display {
   transform: translateY(-15px); }
@@ -15,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem;
   margin: 0;
   transform: translateY(0px);
@@ -28,7 +29,7 @@
 .author-twitter-container {
   position: absolute;
   display: flex;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;

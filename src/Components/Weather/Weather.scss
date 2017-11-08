@@ -1,9 +1,11 @@
+$main-text-color: rgba(255, 255, 255, 0.8);
+
 .weather-container {
   position: absolute;
   top: 2%;
   right: 0;
   margin: 0 1vw;
-  color: white;
+  color: $main-text-color;
   font-size: 1.5rem;
 }
 

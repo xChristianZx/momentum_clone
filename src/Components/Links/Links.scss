@@ -1,5 +1,5 @@
+$main-text-color: rgba(255, 255, 255, 0.7);
 $text-color: rgb(191, 191, 191);
-
 .links-container {  
   position: absolute;
   left: 0;
@@ -10,7 +10,7 @@ $text-color: rgb(191, 191, 191);
   // border: 1px solid green;  
 }
 .links-click-label {  
-  color: white;
+  color: $main-text-color;
   font-size: 1.5rem;
   text-align: left;   
   padding: 0.5rem;

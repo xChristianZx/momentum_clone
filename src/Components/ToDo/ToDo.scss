@@ -1,3 +1,5 @@
+$main-text-color: rgba(255, 255, 255, 0.8);
+
 .todo-container {  
   position: absolute;
   right: 0;
@@ -8,7 +10,7 @@
 }
 
 .todo-click-label {
-  color: white;
+  color: $main-text-color;
   font-size: 1.5rem;
   text-align: right;
   padding: 0.5rem;
@@ -18,7 +20,7 @@
 
 .todo-list-container {
   visibility: hidden;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   padding: 1rem;  
 }
 
