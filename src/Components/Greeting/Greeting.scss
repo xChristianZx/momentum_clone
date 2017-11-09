@@ -1,11 +1,11 @@
 .greeting-container {
   position: absolute;
   top: 35%;
-  left: 20%;
+  left: 5%;
   // border: 1px solid white;
-  width: 60vw;
+  width: 90vw;
   color: white;
-  text-align: center;  
+  text-align: center;
 }
 
 .clock-time {
@@ -19,5 +19,41 @@
   font-size: 5rem;
   // padding: 0.5rem 1rem;
   margin: 0;
-  width: 100%;  
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .clock-time {
+    font: bold 8rem Arial, sans-serif;
+  }
+  .greeting-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-height: 630px) {
+  .clock-time {
+    font: bold 8rem Arial, sans-serif;
+  }
+  .greeting-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-height: 400px) {
+  .clock-time {
+    display: none;
+  }
+  .greeting-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-height: 300px) {
+  .greeting-container {
+    top: 25%;
+  }
+  .greeting-text {
+    font-size: 3rem;
+  }
 }

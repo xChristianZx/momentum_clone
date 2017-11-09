@@ -64,3 +64,27 @@ button {
 .hidden {
   display: none;
   visibility: hidden; }
+
+@media (max-width: 560px) {
+  h3 {
+    font-size: 2rem; }
+  .add-main-goal-container {
+    padding: 0.25rem; }
+  .focus-form {
+    padding: 0 0.25rem; }
+  .focus-form-input {
+    font-size: 1.5rem; } }
+
+@media (max-height: 520px) {
+  h3 {
+    font-size: 2rem; }
+  .add-main-goal-container {
+    padding: 0.25rem; }
+  .focus-form {
+    padding: 0 0.25rem; }
+  .focus-form-input {
+    font-size: 1.5rem; } }
+
+@media (max-height: 400px) {
+  .focus-form-container {
+    bottom: 25%; } }
