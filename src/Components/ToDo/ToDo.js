@@ -15,7 +15,9 @@ class ToDoList extends Component {
   }
 
   componentDidMount() {
-    const localKeys = Object.keys(localStorage);
+    const localKeys = Object.keys(localStorage).filter(item =>
+      item.includes("todo-item")
+    );
     const restoredLocal = localKeys.map(item => {
       return JSON.parse(localStorage.getItem(item));
     });
@@ -30,13 +32,26 @@ class ToDoList extends Component {
 
   handleSubmit = e => {
     let newItem = { item: this.state.item, id: Date.now() };
+
+    // const getTodoIdList = localStorage.getItem("todoIdList");
+    // const addNewItemId = localStorage.setItem(
+    //   "todoIdList",
+    //   getTodoIdList.concat(newItem.id)
+    // );
+
     /* Set to localStorage */
     const stringifyNewItem = JSON.stringify(newItem);
-    localStorage.setItem(newItem.id, stringifyNewItem);
-    const localKeys = Object.keys(localStorage);
+    localStorage.setItem(`todo-item-${newItem.id}`, stringifyNewItem);
+    console.log("localStorage", localStorage);
+
+    const localKeys = Object.keys(localStorage).filter(item =>
+      item.includes("todo-item")
+    );
+    // const localKeys = localStorage.getItem('todoIdList');
     const restoredLocal = localKeys.map(item => {
       return JSON.parse(localStorage.getItem(item));
     });
+
     this.setState({
       list: restoredLocal,
       item: ""
@@ -45,7 +60,7 @@ class ToDoList extends Component {
   };
 
   deleteItem = id => {
-    localStorage.removeItem(id);
+    localStorage.removeItem(`todo-item-${id}`);
     this.setState((prevState, { list }) => ({
       list: prevState.list.filter(item => item.id !== id)
     }));
@@ -57,7 +72,7 @@ class ToDoList extends Component {
 
   render() {
     console.log("list: ", this.state.list);
-    console.log(this.state.active);
+    // console.log(this.state.active);
     let activeToDoList = classNames({
       "todo-list-container": true,
       active: this.state.active

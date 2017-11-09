@@ -17,6 +17,16 @@ class Links extends Component {
     };
   }
 
+  componentDidMount() {
+    const localKeys = Object.keys(localStorage).filter(item =>
+      item.includes("links-item")
+    );
+    const restoredLocal = localKeys.map(item => {
+      return JSON.parse(localStorage.getItem(item));
+    });
+    this.setState({ links: restoredLocal });
+  }
+
   handleChange = e => {
     const fields = this.state.fields;
     fields[e.target.name] = e.target.value;
@@ -30,18 +40,28 @@ class Links extends Component {
       url: this.state.fields.url,
       id: Date.now()
     };
+    const stringifyNewLink = JSON.stringify(newLink);
+    localStorage.setItem(`links-item-${newLink.id}`, stringifyNewLink);
+
+    const localKeys = Object.keys(localStorage).filter(item =>
+      item.includes("links-item")
+    );
+    const restoredLocal = localKeys.map(item => {
+      return JSON.parse(localStorage.getItem(item));
+    });
+
     this.setState((prevState, { links }) => ({
-      links: prevState.links.concat(newLink),
+      links: restoredLocal,
       fields: {
         name: "",
         url: ""
       }
-    }));
-    console.log("SUBMITTED");
+    }));    
     e.preventDefault();
   };
 
   deleteItem = id => {
+    localStorage.removeItem(`links-item-${id}`);
     this.setState((prevState, { links }) => ({
       links: prevState.links.filter(item => item.id !== id)
     }));
