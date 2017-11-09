@@ -18,8 +18,8 @@ class Links extends Component {
   }
 
   componentDidMount() {
-    const localKeys = Object.keys(localStorage).filter(item =>
-      item.includes("links-item")
+    const localKeys = Object.keys(localStorage).filter(key =>
+      key.includes("links-item")
     );
     const restoredLocal = localKeys.map(item => {
       return JSON.parse(localStorage.getItem(item));
@@ -43,8 +43,8 @@ class Links extends Component {
     const stringifyNewLink = JSON.stringify(newLink);
     localStorage.setItem(`links-item-${newLink.id}`, stringifyNewLink);
 
-    const localKeys = Object.keys(localStorage).filter(item =>
-      item.includes("links-item")
+    const localKeys = Object.keys(localStorage).filter(key =>
+      key.includes("links-item")
     );
     const restoredLocal = localKeys.map(item => {
       return JSON.parse(localStorage.getItem(item));
