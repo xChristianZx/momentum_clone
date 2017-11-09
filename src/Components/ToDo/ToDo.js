@@ -14,6 +14,14 @@ class ToDoList extends Component {
     };
   }
 
+  componentDidMount() {
+    const localKeys = Object.keys(localStorage);
+    const restoredLocal = localKeys.map(item => {
+      return JSON.parse(localStorage.getItem(item));
+    });
+    this.setState({ list: restoredLocal });
+  }
+
   handleChange = e => {
     this.setState({
       item: e.target.value
@@ -22,25 +30,29 @@ class ToDoList extends Component {
 
   handleSubmit = e => {
     let newItem = { item: this.state.item, id: Date.now() };
-    this.setState((prevState, { list }) => ({
-      list: prevState.list.concat(newItem),
+    /* Set to localStorage */
+    const stringifyNewItem = JSON.stringify(newItem);
+    localStorage.setItem(newItem.id, stringifyNewItem);
+    const localKeys = Object.keys(localStorage);
+    const restoredLocal = localKeys.map(item => {
+      return JSON.parse(localStorage.getItem(item));
+    });
+    this.setState({
+      list: restoredLocal,
       item: ""
-    }));
+    });
     e.preventDefault();
   };
 
   deleteItem = id => {
+    localStorage.removeItem(id);
     this.setState((prevState, { list }) => ({
       list: prevState.list.filter(item => item.id !== id)
     }));
   };
 
   activeHandler = () => {
-    if (this.state.active === false) {
-      this.setState({ active: true });
-    } else {
-      this.setState({ active: false });
-    }
+    this.setState({ active: !this.state.active });
   };
 
   render() {
