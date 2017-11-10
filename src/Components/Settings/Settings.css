@@ -9,7 +9,10 @@
 
 .settings-icon {
   margin: 0 1vw;
-  font-size: 2rem; }
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8); }
+  .settings-icon:hover {
+    color: white; }
 
 .location-container:hover .location-title {
   transform: translateY(-10px); }
