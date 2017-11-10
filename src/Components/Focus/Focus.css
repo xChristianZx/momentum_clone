@@ -53,13 +53,13 @@ h4 {
     padding: 0 1rem; }
 
 button {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   background: none;
   border: none;
   border-radius: 100%;
   font-size: 1.5rem; }
   button:hover {
-    border: 1px solid white; }
+    color: white; }
 
 .hidden {
   display: none;
@@ -68,12 +68,19 @@ button {
 @media (max-width: 560px) {
   h3 {
     font-size: 2rem; }
+  .focus-form-container {
+    left: 0;
+    width: 100vw; }
   .add-main-goal-container {
-    padding: 0.25rem; }
+    padding: 0 0.25rem; }
   .focus-form {
     padding: 0 0.25rem; }
   .focus-form-input {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .main-goal-container {
+    padding: 0; }
+  .main-goal-form {
+    padding: 0; } }
 
 @media (max-height: 520px) {
   h3 {
@@ -85,6 +92,10 @@ button {
   .focus-form-input {
     font-size: 1.5rem; } }
 
-@media (max-height: 400px) {
+@media (max-height: 420px) {
   .focus-form-container {
-    bottom: 25%; } }
+    bottom: 25%; }
+  .main-goal-container {
+    padding: 0; }
+  .main-goal-form {
+    padding: 0; } }

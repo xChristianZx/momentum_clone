@@ -20,6 +20,7 @@
   // padding: 0.5rem 1rem;
   margin: 0;
   width: 100%;
+  white-space: nowrap;
 }
 
 @media (max-width: 700px) {
@@ -40,7 +41,7 @@
   }
 }
 
-@media (max-height: 400px) {
+@media (max-height: 420px) {
   .clock-time {
     display: none;
   }

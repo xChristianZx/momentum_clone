@@ -1,12 +1,18 @@
 $main-text-color: rgba(255, 255, 255, 0.8);
 
-.todo-container {  
+button {
+  color: $main-text-color;
+  &:hover {
+    color: white;
+  }
+}
+.todo-container {
   position: absolute;
   right: 0;
   bottom: 2%;
   margin: 0 1vw;
   list-style: none;
-  width: 23vw;  
+  width: 23vw;
 }
 
 .todo-click-label {
@@ -21,7 +27,7 @@ $main-text-color: rgba(255, 255, 255, 0.8);
 .todo-list-container {
   visibility: hidden;
   background: rgba(0, 0, 0, 0.8);
-  padding: 1rem;  
+  padding: 1rem;
 }
 
 .todo-list {
@@ -33,12 +39,12 @@ $main-text-color: rgba(255, 255, 255, 0.8);
   list-style: none;
   padding: 0;
 }
-.todo-list-item {  
+.todo-list-item {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0.5rem;  
+  padding: 0.5rem 0.5rem;
   font-size: 1.5rem;
   line-height: 3rem;
 }
